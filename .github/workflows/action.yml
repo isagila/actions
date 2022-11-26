@@ -17,7 +17,7 @@ jobs:
       - name: Install pyinstaller
         run: pip install pyinstaller
       - name: Build
-        run: pyintaller main.spec
+        run: pyinstaller main.spec
       - uses: actions/upload-artifact@v2
         with:
           name: calc
