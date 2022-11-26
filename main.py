@@ -47,6 +47,7 @@ def calculate(equation):
 
 
 def main():
+  
     try:
         with open("input.txt", "r") as file:
             for equation in file.readlines():
