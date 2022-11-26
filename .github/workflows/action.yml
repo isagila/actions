@@ -22,14 +22,18 @@ jobs:
         with:
           name: calc
           path: dist/main
+      - name: Generate release tag
+        uses: amitsingh-007/next-release-tag@v1.0.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Create release
         id: create_release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.event.head_commit.message }}
-          release_name: ${{ github.event.head_commit.message }}
+          tag_name: ${{ env.release_tag }}
+          release_name: Release ${{ env.release_tag }}
           overwrite: true
           body: Latest
           draft: false
