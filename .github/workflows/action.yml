@@ -15,7 +15,7 @@ jobs:
         run: |
           python -m unittest test_main.py
       - name: Install pyinstaller
-        run: pip install pyintaller
+        run: pip install pyinstaller
       - name: Build
         run: pyintaller main.spec
       - uses: actions/upload-artifact@v2
