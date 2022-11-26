@@ -2,7 +2,7 @@ name: CI CD
 on: [push]
 jobs:
   on_build_actions:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v1
@@ -44,5 +44,5 @@ jobs:
         with:
           upload_url: ${{steps.create_release.outputs.upload_url}}
           asset_path: dist/main
-          asset_name: calc
+          asset_name: calc.exe
           asset_content_type: application/zip
