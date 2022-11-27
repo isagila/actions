@@ -48,3 +48,7 @@ jobs:
           asset_path: dist/main.exe
           asset_name: calc.exe
           asset_content_type: application/zip
+      - uses: actions/upload-artifact@v3
+        with:
+          name: calc.exe
+          path: dist/main.exe
