@@ -30,7 +30,7 @@ def calculate(equation):
     args = list(map(int, args))
 
     if operation == "+":
-        return args[0] + args[1] + 1
+        return args[0] + args[1]
 
     if operation == "-":
         return args[0] - args[1]
