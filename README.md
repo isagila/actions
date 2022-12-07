@@ -1,1 +1,2 @@
-# actions
+# Actions
+Some text
